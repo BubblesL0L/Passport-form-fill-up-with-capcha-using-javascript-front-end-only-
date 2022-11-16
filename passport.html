@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passport</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="captcha.js"></script>
+    <link rel="stylesheet" href="captcha.css">
+    <integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+</head>
+<body onload="generate()">
+
+    <h1>PASSPORT APPLICATION FORM</h1>
+    <h1>Government of India, Ministry of External Affairs</h1>
+    <fieldset>
+    <img src="SATYAMEV JAYTE.PNG">
+    <h2>Please read the Passport Instruction Booklet carefully before filling the form. Furnishing of incorrect information/ 
+        suppression of information would lead to rejection of application and would attract penal provisions as prescribed 
+        under the Passports Act, 1967. Please produce your original documents at the time of submission of the form. All fields 
+        marked with (*) are mandatory to fill.</h2>
+    </fieldset>
+        
+        <form action="">
+            <h2><mark>Service Required</mark></h2> 
+            <h3>Applying for *
+                <select name="Applying for *" id="Applying for *">
+                <option value="Fresh Passport">Fresh Passport</option>
+                <option value="Fresh Passport">Re issue of Passport</option></select>
+            </h3>
+            <h3>Type of Application *<input type="radio">Normal<input type="radio">Tatkaal</h3>
+            <h3>Type of Passport Booklet *<input type="radio">36 Pages<input type="radio">60 Pages</h3>
+            <h2><mark>Applicant Details</mark></h2>
+            <h3>Applicant's Given Name <input type="text"></h3>
+            <h3>Surname <input type="text"></h3> 
+            <h3>Gender
+                <select name="Gender" id="Gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Transgender">Transgender</option></select>
+            </h3>
+            <h3>Are you known by any other names(aliases)? *<input type="radio">Yes<input type="radio">No</h3>
+            <h3>Have you ever changed your name ?*<input type="radio">Yes<input type="radio">No</h3>
+            <h3>Date of Birth (DD/MM/YYYY) *<input type="text"></h3>
+            <h2><mark>Other Details</mark></h2> 
+            <h2>Provide the following details if applicant has applied for or been granted foreign citizenship.</h2>
+            <h3>Have you ever been granted citizenship by any other region/country?*<input type="radio">Yes<input type="radio">No</h3>
+            <h3>Have you ever held the passport of any other region/country at any time?*<input type="radio">Yes<input type="radio">No</h3>
+            <h3>Have you ever changed your name ?*<input type="radio">Yes<input type="radio">No</h3>
+            <h3>Have you ever surrendered your Indian passport?*<input type="radio">Yes<input type="radio">No</h3>
+            <fieldset>
+                <h2><mark>Self Declaration</mark></h2>
+                <h3>I owe allegiance to the sovereignty, unity & integrity of India, and have not voluntarily acquired citizenship or travel document of any 
+                    other country. I have not lost, surrendered or been deprived of the citizenship of India. I have not contravened any of the conditions 
+                    relating to the possession and use of an Indian passport. 
+                    I affirm that the information and particulars given by me in this form are true and correct. I further state that I am not suppressing any 
+                    material information in this regard. I further affirm that the enclosures and documentary proof submitted in support of my application for 
+                    an Indian passport are authentic and solely pertain to me and I am fully responsible for the accuracy of the same. I am liable to be 
+                    penalized or prosecuted if found otherwise. I am aware that under the Passports Act, 1967 it is a criminal offence to furnish any false 
+                    information or to suppress any material information with a view to obtaining passport or travel document. 
+                    I have read and understood the contents of the above and by submitting this form certify that all the information submitted by me in the 
+                    form is bonafide. </h3>
+                    <h3><input type="checkbox" id="i agree" name="i agree" value="Bike">
+                    I agree</h3>
+            </fieldset>
+            <h3>Place <input type="text"></h3><h3>Date <input type="text"></h3>
+            <h2>Note:</h2>
+            <h3>
+                Applicants are required to submit the proof of address of the present address only, irrespective of the date from which he/she has been 
+                residing at the given address. 
+            </h3>
+            
+        </form>
+        <div id="user-input" class="inline">
+            <input type="text" id="submit"
+                placeholder="Captcha code" />
+        </div>
+     
+        <div class="inline" onclick="generate()">
+            <i class="fas fa-sync"></i>
+        </div>
+     
+        <div id="image" class="inline" selectable="False">
+        </div>
+        <input type="submit" id="btn" onclick="printmsg()" />
+     
+        <p id="key"></p>
+        <h2><mark><input type="submit"></mark></h2>
+     
+</body>
+</html>
